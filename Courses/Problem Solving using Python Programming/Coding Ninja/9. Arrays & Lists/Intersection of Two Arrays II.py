@@ -5,12 +5,12 @@ import sys
 
 def intersections(li_n, li_m) :
     for n in range(len(li_n)):
-        flag = False
         # print(li_n[n],li_n[:n],li_n[(n + 1):])
-        if li_n[n] in li_m:
-            flag = True
-        if flag:
-            print(li_n[n], end = " ")
+        for m in range(len(li_m)):
+            if li_n[n] == li_m[m]:
+                print(li_n[n], end = " ")
+                li_m[m] = "null"
+                break
 
 #Taking Input Using Fast I/O
 def takeInput() :
