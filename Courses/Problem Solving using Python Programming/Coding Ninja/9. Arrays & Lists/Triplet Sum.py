@@ -1,4 +1,4 @@
-# You have been given an integer array/list(ARR) and a number X. Find and return the total number of pairs in the array/list which sum to X.
+# You have been given a random integer array/list(ARR) and a number X. Find and return the number of triplets in the array/list which sum to X.
 
 from sys import stdin
 
@@ -7,8 +7,9 @@ def pairSum(arr, n, x) :
     for i in range(n):
         # print(li_n[n],li_n[:n],li_n[(n + 1):])
         for f in range(i+1,n):
-            if arr[i] + arr[f] == x:
-                count = count + 1
+            for e in range(f+1,n):
+                if arr[i] + arr[f] + arr[e] == x:
+                    count = count + 1
     return count
 
 #Taking Input Using Fast I/O
