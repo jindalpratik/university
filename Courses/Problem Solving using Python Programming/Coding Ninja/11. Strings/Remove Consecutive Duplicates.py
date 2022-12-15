@@ -21,6 +21,5 @@ def removeConsecutiveDuplicates(string) :
 
 string = stdin.readline().strip()
 
-ans = removeConsecutiveDuplicates(string)
+removeConsecutiveDuplicates(string)
 
-print(ans)
