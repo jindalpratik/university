@@ -1,5 +1,5 @@
-import testfunction
+import testfunction as mian
 from random import randint
 
-print(testfunction.sum(2, 5))
+print(mian.sum(2, 5))
 print(randint(6,10000))
