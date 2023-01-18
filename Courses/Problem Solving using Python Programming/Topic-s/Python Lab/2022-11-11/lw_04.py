@@ -7,7 +7,6 @@ li = input().split()
 #     li[n],li[n-1] = li[n-1],li[n]
 # print(li)
 
-print(li[-1],end = " ")
+print(li[-1], end=" ")
 for i in li[:len(li)-1]:
-    print(i, end = " ")
-
+    print(i, end=" ")

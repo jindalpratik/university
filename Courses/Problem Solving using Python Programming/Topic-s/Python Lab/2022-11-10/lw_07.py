@@ -7,7 +7,7 @@ li = input().split()
 for i in range(len(li)):
     for f in range(len(li[i])):
         if f == 0:
-            print(chr(ord(li[i][f])-32),end = "")
+            print(chr(ord(li[i][f])-32), end="")
         else:
-            print(li[i][f], end = "")
-    print(" ",end = "")
+            print(li[i][f], end="")
+    print(" ", end="")

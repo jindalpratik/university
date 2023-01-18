@@ -16,4 +16,3 @@ for i in range(len(li[1:])):
     if li[i] > li[index]:
         index = i
 print(li[index])
-
