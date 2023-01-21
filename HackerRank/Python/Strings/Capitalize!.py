@@ -8,13 +8,21 @@ import sys
 
 # Complete the solve function below.
 def solve(s):
-    li_s = s.split()
     new_str = ""
-    for i in li_s:
-        new_str += chr(ord(i[0])-32) + i[1:] + " "
+    for i in range(len(s)):
+        if ord(s[i]) > 96 and  ord(s[i]) < 123 and (s[i-1] == " " or i == 0):
+            new_str += chr(ord(s[i])-32)
+        else:
+            new_str += s[i]
     return new_str
 
-s = input()
+if __name__ == '__main__':
+    fptr = open(os.environ['OUTPUT_PATH'], 'w')
 
-result = solve(s)
-print(result)
+    s = input()
+
+    result = solve(s)
+
+    fptr.write(result + '\n')
+
+    fptr.close()
