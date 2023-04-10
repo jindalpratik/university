@@ -1,6 +1,6 @@
-// Write 
+// Write
 
-#include<stdio.h>
+#include <stdio.h>
 
 int main()
 {

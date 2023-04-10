@@ -19,16 +19,16 @@
 #include <stdio.h>
 int main()
 {
-    int n ,a = 1, b = 1,sum = 0;
+    int n, a = 1, b = 1, sum = 0;
     printf("How long should the fibonacci series be: ");
     scanf("%d", &n);
     printf("1 1 ");
-    for(int i=2; i < n; i++)
+    for (int i = 2; i < n; i++)
     {
-        sum = a+b;
+        sum = a + b;
         a = b;
         b = sum;
-        printf("%d ",sum);
+        printf("%d ", sum);
     }
     return 0;
 }
