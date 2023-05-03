@@ -1,0 +1,24 @@
+<html>
+<head>
+    <title>First Javascript Page</title>
+    <script src="jquery-3.6.4.js"></script>
+    <script>
+        $(document).ready(function() {
+            $("input").focus(function() {
+                $(this).css("background-color","yellow");
+            })
+            $("input").blur(function() {
+                $(this).css("background-color","blue")
+            })
+        })
+    </script>
+</head>
+<body>
+    <h1>This is the heading</h1>
+    Name: <input type="text" name="fullname"><br>
+    Email: <input type="text" name="email">
+    <p>This a paragraph</p>
+    <p id="test">This is another paragraph</p>
+    <button>Click me to hide paragraph</button>
+</body>
+</html>
