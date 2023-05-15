@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>Box Movement Animation using jQuery</title>
+	<script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
+	<style>
+		#myBox {
+			width: 100px;
+			height: 100px;
+			background-color: red;
+			position: absolute;
+			top: 0px;
+			left: 0px;
+		}
+	</style>
+</head>
+<body>
+	<div id="myBox"></div>
+	<script>
+        $(document).ready(function() {
+            setInterval(function() {
+              // Move the box to the top-left corner
+              $('#myBox').animate({
+                'left': '0px',
+                'top': '0px'
+              }, 1000);
+          
+              // Move the box to the top-right corner
+              $('#myBox').animate({
+                'left': ($(document).width() - $('#myBox').width()) + 'px',
+                'top': '0px'
+              }, 1000);
+          
+              // Move the box to the bottom-right corner
+              $('#myBox').animate({
+                'left': ($(document).width() - $('#myBox').width()) + 'px',
+                'top': ($(document).height() - $('#myBox').height()) + 'px'
+              }, 1000);
+          
+              // Move the box to the bottom-left corner
+              $('#myBox').animate({
+                'left': '0px',
+                'top': ($(document).height() - $('#myBox').height()) + 'px'
+              }, 1000);
+            }, 5000); // Repeat every 5 seconds (5000 milliseconds)
+          });
+          
+	</script>
+</body>
+</html>
