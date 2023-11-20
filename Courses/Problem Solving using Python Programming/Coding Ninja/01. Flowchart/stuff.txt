@@ -1,9 +1,0 @@
-Is mainly in pdf form about different flowcharts see the 2022-10-03 & 2022-10-04 folders in:
-
-University\Pratik\Courses\Problem Solving using Python Programming\Topic(s)\Explore The Concepts
-
-and 
-
-University\Pratik\Courses\Problem Solving using Python Programming\Topic(s)\Hands on practice and query handling
-
-for more details.
