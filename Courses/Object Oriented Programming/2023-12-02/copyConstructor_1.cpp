@@ -1,19 +1,22 @@
 #include <iostream>
 using namespace std;
 
-class Employee {
-    public:
+class Employee
+{
+public:
     int ecode;
     string ename;
     double esalary;
 
-    Employee(int ec, string nm, double sal) {
+    Employee(int ec, string nm, double sal)
+    {
         ecode = ec;
         ename = nm;
         esalary = sal;
     }
 
-    Employee(Employee& e) {
+    Employee(Employee &e)
+    {
         ecode = e.ecode;
         ename = e.ename;
         esalary = e.esalary;

@@ -1,22 +1,24 @@
-#include<iostream>
-#include<string>
+#include <iostream>
+#include <string>
 using namespace std;
 
 class Employee
-{      
-    public:
+{
+public:
     string name;
     string ecode;
-    int age;  
+    int age;
 
-    void display(){
+    void display()
+    {
         cout << "Name: " << name << endl;
         cout << "Employee Code: " << ecode << endl;
         cout << "Age: " << age << endl;
     }
 };
 
-int main(){
+int main()
+{
     Employee e1;
     e1.name = "Deepak";
     e1.ecode = "cu001";

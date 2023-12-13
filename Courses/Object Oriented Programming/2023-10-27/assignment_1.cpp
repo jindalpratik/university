@@ -10,34 +10,41 @@ Now print the entire data as "DD/MM/YYYY" format.
 
 using namespace std;
 
-class Day {
+class Day
+{
 public:
     int day;
-    Day(){
+    Day()
+    {
         cout << "Enter day: ";
         cin >> day;
     }
 };
 
-class Month {
+class Month
+{
 public:
     int month;
-    Month(){
+    Month()
+    {
         cout << "Enter month: ";
         cin >> month;
     }
 };
 
-class Year {
+class Year
+{
 public:
     int year;
-    Year(){
+    Year()
+    {
         cout << "Enter year: ";
         cin >> year;
     }
 };
 
-int main(){
+int main()
+{
     Day d;
     Month m;
     Year y;

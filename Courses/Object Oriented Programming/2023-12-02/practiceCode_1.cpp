@@ -1,29 +1,35 @@
 #include <iostream>
 using namespace std;
 
-class Increment {
-    private:
+class Increment
+{
+private:
     int number;
 
-    public:
-    Increment(int nm) {
+public:
+    Increment(int nm)
+    {
         number = nm;
     }
 
-    void operator ++ () {
+    void operator++()
+    {
         number = number + 2;
     }
 
-    void operator ++ (int) {
+    void operator++(int)
+    {
         number = number + 3;
     }
 
-    void display() {
+    void display()
+    {
         cout << "Count: " << number << endl;
-    } 
+    }
 };
 
-int main() {
+int main()
+{
     int num;
     cin >> num;
     Increment inc1(num);

@@ -18,28 +18,34 @@ two parameters and print their areas.
 
 using namespace std;
 
-class Rectangle {
-    private:
-        int length, breadth;
-    public:
-        Rectangle() {
-            length = 0;
-            breadth = 0;
-            cout << length * breadth << endl;
-        }
-        Rectangle(int length_in, int breadth_in) {
-            length = length_in;
-            breadth = breadth_in;
-            cout << length * breadth << endl;
-        }
-        Rectangle(int length_in) {
-            length = length_in;
-            breadth = length_in;
-            cout << length * breadth << endl;
-        }
+class Rectangle
+{
+private:
+    int length, breadth;
+
+public:
+    Rectangle()
+    {
+        length = 0;
+        breadth = 0;
+        cout << length * breadth << endl;
+    }
+    Rectangle(int length_in, int breadth_in)
+    {
+        length = length_in;
+        breadth = breadth_in;
+        cout << length * breadth << endl;
+    }
+    Rectangle(int length_in)
+    {
+        length = length_in;
+        breadth = length_in;
+        cout << length * breadth << endl;
+    }
 };
 
-int main() {
+int main()
+{
     Rectangle obj1;
     Rectangle obj2(10);
     Rectangle obj3(10, 20);

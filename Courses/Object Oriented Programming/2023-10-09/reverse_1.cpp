@@ -5,14 +5,17 @@
 
 using namespace std;
 
-string reverse(string s) {
-    if (s.length() == 0) {
+string reverse(string s)
+{
+    if (s.length() == 0)
+    {
         return "";
     }
     return reverse(s.substr(1)) + s[0];
 }
 
-int main() {
+int main()
+{
     string s;
     cin >> s;
     cout << reverse(s) << endl;

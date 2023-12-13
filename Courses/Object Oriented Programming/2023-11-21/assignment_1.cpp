@@ -9,31 +9,34 @@
  7/3 = 21
 */
 
-#include<iostream>
+#include <iostream>
 using namespace std;
 
-class Multiply{
-    private:
+class Multiply
+{
+private:
     double value;
 
-    public:
-
+public:
     // Constructor to initialize value
-    Multiply(double n) {value = n;}
+    Multiply(double n) { value = n; }
 
     // Operator function for when used as a prefix
-    Multiply operator / (Multiply &obj) {
+    Multiply operator/(Multiply &obj)
+    {
         Multiply result(0);
         result.value = value * obj.value;
         return result;
     }
 
-    void display() {
+    void display()
+    {
         cout << "Result: " << value << endl;
     }
 };
 
-int main() {
+int main()
+{
     double num1, num2;
     cout << "Enter two numbers: ";
     cin >> num1 >> num2;

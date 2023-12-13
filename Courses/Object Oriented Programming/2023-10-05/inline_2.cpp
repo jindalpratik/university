@@ -1,13 +1,15 @@
 // Write an inline function that calculates the cube of a number.
 
-#include<iostream>
+#include <iostream>
 using namespace std;
 
-inline int cube(int a){
-    return a*a*a;
+inline int cube(int a)
+{
+    return a * a * a;
 }
 
-int main(){
+int main()
+{
     int a;
     cout << "Enter a number: ";
     cin >> a;

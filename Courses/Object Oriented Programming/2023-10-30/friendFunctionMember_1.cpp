@@ -1,26 +1,29 @@
-#include<iostream>
+#include <iostream>
 using namespace std;
 
 class Product;
 class Category
 {
-    public:
-    void friendFunc(Product& pr1);
+public:
+    void friendFunc(Product &pr1);
 };
 
 class Product
 {
-    private:
+private:
     string name, id;
-    public:
-    Product(string pname, string pid){
+
+public:
+    Product(string pname, string pid)
+    {
         name = pname;
         id = pid;
     }
-    friend void Category::friendFunc(Product& pr1);
+    friend void Category::friendFunc(Product &pr1);
 };
 
-void Category::friendFunc(Product& pr1){
+void Category::friendFunc(Product &pr1)
+{
     cout << "Name: " << pr1.name << endl;
     cout << "ID: " << pr1.id << endl;
 }

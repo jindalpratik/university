@@ -1,7 +1,8 @@
-#include<stdio.h>
-int main(){
+#include <stdio.h>
+int main()
+{
     FILE *ptr;
-    ptr = fopen("first.txt","r");
+    ptr = fopen("first.txt", "r");
     if (ptr != NULL)
         printf("File opened successfully.");
     else

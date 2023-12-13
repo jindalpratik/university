@@ -34,8 +34,7 @@ int main()
         }
     }
 
-    
-    fclose(ptr);
+        fclose(ptr);
     printf("Enter the mode to edit the file in. (r,w,a) ");
     fflush(stdin);
     scanf("%c", &ans);

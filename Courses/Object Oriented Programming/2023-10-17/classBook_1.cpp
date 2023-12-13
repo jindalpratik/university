@@ -1,17 +1,17 @@
-#include<iostream>
-#include<string>
+#include <iostream>
+#include <string>
 using namespace std;
 
-
 class Book
-{      
-    public:
+{
+public:
     string title;
     string author;
     float price;
 };
 
-int main(){
+int main()
+{
     Book b1;
     b1.title = "400 days";
     b1.author = "Chetan Bhagat";

@@ -1,6 +1,6 @@
 /*
 Suppose you have a piggy bank with an intial amount of $50 and you have
-to add some more amount to it. Create a class 'AddAmount' with a data 
+to add some more amount to it. Create a class 'AddAmount' with a data
 member named 'amount' with an initial value of $50.
 
 Make two constructors of thsi class as follows:
@@ -17,17 +17,21 @@ the final amount int the Piggie Bank.
 
 using namespace std;
 
-class AddAmount {
-    private:
-        int amount = 50;
-    public:
-        AddAmount(int amount_in = 0) {
-            amount += amount_in;
-            cout << amount << endl;
-        }
+class AddAmount
+{
+private:
+    int amount = 50;
+
+public:
+    AddAmount(int amount_in = 0)
+    {
+        amount += amount_in;
+        cout << amount << endl;
+    }
 };
 
-int main() {
+int main()
+{
     AddAmount obj1;
     AddAmount obj2(100);
     return 0;

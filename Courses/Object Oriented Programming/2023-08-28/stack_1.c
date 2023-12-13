@@ -4,9 +4,11 @@
 int stack[MAX_SIZE];
 int top = -1;
 
-void push(int value) {
-    //check for stack is full or not
-    if (top == MAX_SIZE - 1) {
+void push(int value)
+{
+    // check for stack is full or not
+    if (top == MAX_SIZE - 1)
+    {
         printf("Stack Overflow\n");
         return;
     }
@@ -14,18 +16,22 @@ void push(int value) {
     printf("Element %d pushed to the stack\n", value);
 }
 
-void pop() {
-    //check for stack empty or not
-    if (top == -1) {
+void pop()
+{
+    // check for stack empty or not
+    if (top == -1)
+    {
         printf("Stack Underflow\n");
         return;
     }
     printf("Element %d popped from the stack\n", stack[top--]);
 }
 
-void display() {
-    //if top==-1 stack gets empty
-    if (top == -1) {
+void display()
+{
+    // if top==-1 stack gets empty
+    if (top == -1)
+    {
         printf("Stack is empty\n");
         return;
     }
@@ -35,7 +41,8 @@ void display() {
     printf("\n");
 }
 
-int main() {
+int main()
+{
     push(10);
     push(20);
     push(30);

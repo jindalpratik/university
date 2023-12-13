@@ -1,4 +1,4 @@
-#include<iostream>
+#include <iostream>
 using namespace std;
 
 class MyClass
@@ -8,10 +8,10 @@ public:
     void normalFunc()
     {
         cout << "Cannot accessed by constant object" << endl;
-
     }
 
-    void fun() const{
+    void fun() const
+    {
         cout << "Value of A: " << A << endl;
     }
 };

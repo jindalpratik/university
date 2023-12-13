@@ -1,20 +1,25 @@
-#include<iostream>
+#include <iostream>
 
 using namespace std;
 
-class Myclass {
+class Myclass
+{
 public:
-    Myclass(){
+    Myclass()
+    {
         cout << "Constructor called" << endl;
     }
-    ~Myclass(){
+    ~Myclass()
+    {
         cout << "Destructor called" << endl;
     }
 };
 
-int main(){
+int main()
+{
     int x = 0;
-    if (x == 0){
+    if (x == 0)
+    {
         static Myclass obj;
     }
     cout << "End of main" << endl;

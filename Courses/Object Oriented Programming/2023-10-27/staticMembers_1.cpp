@@ -1,18 +1,21 @@
-#include<iostream>
+#include <iostream>
 
 using namespace std;
 
-class Employee {
+class Employee
+{
 public:
     static int count;
-    Employee(){
+    Employee()
+    {
         count++;
     }
 };
 
 int Employee::count = 0;
 
-int main(){
+int main()
+{
     Employee e1;
     cout << "Number of employees: " << e1.count << endl;
 

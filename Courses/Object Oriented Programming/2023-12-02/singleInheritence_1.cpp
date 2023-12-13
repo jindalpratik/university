@@ -1,13 +1,15 @@
 #include <iostream>
 using namespace std;
 
-class Vehicle {
-    protected:
+class Vehicle
+{
+protected:
     string fuel = "Petrol";
 };
 
-class Car: public Vehicle {
-    public:
+class Car : public Vehicle
+{
+public:
     int wheels = 4;
     void vehicleItems()
     {
@@ -15,7 +17,8 @@ class Car: public Vehicle {
     }
 };
 
-int main() {
+int main()
+{
     Car car;
     car.vehicleItems();
 }

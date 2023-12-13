@@ -1,8 +1,9 @@
-#include<iostream>
+#include <iostream>
 using namespace std;
 
-class Distance {
-    public:
+class Distance
+{
+public:
     int km, mt;
     Distance()
     {
@@ -14,10 +15,10 @@ class Distance {
         km = k;
         mt = m;
     }
-    friend Distance operator + (Distance&, Distance&);
+    friend Distance operator+(Distance &, Distance &);
 };
 
-Distance operator + (Distance& d1, Distance& d2)
+Distance operator+(Distance &d1, Distance &d2)
 {
     Distance d3;
     d3.km = d1.km + d2.km;
@@ -26,9 +27,10 @@ Distance operator + (Distance& d1, Distance& d2)
     return d3;
 }
 
-int main(){
-    Distance d1(10,200);
-    Distance d2(12,250);
+int main()
+{
+    Distance d1(10, 200);
+    Distance d2(12, 250);
     Distance d3;
 
     d3 = d1 + d2;

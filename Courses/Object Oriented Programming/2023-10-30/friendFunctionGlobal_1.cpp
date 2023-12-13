@@ -7,15 +7,17 @@ private:
     string name, id;
 
 public:
-    Product(string pname, string pid){
+    Product(string pname, string pid)
+    {
         name = pname;
         id = pid;
     }
 
-    friend void friendFunc(Product& pr1);
+    friend void friendFunc(Product &pr1);
 };
 
-void friendFunc(Product& pr1){
+void friendFunc(Product &pr1)
+{
     cout << "Name: " << pr1.name << endl;
     cout << "ID: " << pr1.id << endl;
 }

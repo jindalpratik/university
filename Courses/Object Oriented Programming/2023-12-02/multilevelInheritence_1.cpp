@@ -11,7 +11,7 @@ public:
     }
 };
 
-class Father: public Grandfather
+class Father : public Grandfather
 {
 public:
     Father() { cout << "Constructor for Father"; }
@@ -21,7 +21,7 @@ public:
     }
 };
 
-class Son: public Father
+class Son : public Father
 {
 public:
     Son() { cout << "Constructor for Son"; }
@@ -31,7 +31,8 @@ public:
     }
 };
 
-int main() {
+int main()
+{
     Son son;
     son.print1();
     son.print2();

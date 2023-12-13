@@ -23,7 +23,6 @@ public:
     {
         return length * width;
     }
-    
 };
 
 int main()
@@ -36,4 +35,4 @@ int main()
     const Rectangle r1(l, w);
     cout << "Area: " << r1.calculateArea() << endl;
     return 0;
-}   
+}

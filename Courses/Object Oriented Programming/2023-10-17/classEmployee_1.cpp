@@ -1,16 +1,17 @@
-#include<iostream>
-#include<string>
+#include <iostream>
+#include <string>
 using namespace std;
 
 class Employee
-{      
-    public:
+{
+public:
     string name;
     string ecode;
-    int age;  
+    int age;
 };
 
-int main(){
+int main()
+{
     Employee e1;
     e1.name = "Ramesh";
     e1.ecode = "e001";

@@ -1,25 +1,29 @@
-#include<iostream>
+#include <iostream>
 using namespace std;
 
-class Employee{
-    public:
+class Employee
+{
+public:
     string name, ecode;
-    Employee(string nm, string ec){
+    Employee(string nm, string ec)
+    {
         name = nm;
         ecode = ec;
         cout << "Employee name: " << name << endl;
         cout << "Employee code: " << ecode << endl;
-    }    
+    }
 };
 
-void editInfo(Employee& obj, string nm, string ec){
+void editInfo(Employee &obj, string nm, string ec)
+{
     obj.name = nm;
     obj.ecode = ec;
     cout << "Inside function obj.name: " << obj.name << endl;
     cout << "Inside function obj.ecode " << obj.ecode << endl;
 }
 
-int main(){
+int main()
+{
     string nm, ec;
     Employee e1("Ram", "emp001");
     cout << "Enter new name: ";

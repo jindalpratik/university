@@ -2,9 +2,9 @@
 #include <string.h>
 struct A
 {
-    int a:1;
-    int b:1;
-}__attribute__((packed, aligned(1)));
+    int a : 1;
+    int b : 1;
+} __attribute__((packed, aligned(1)));
 struct B
 {
     long long C;

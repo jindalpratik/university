@@ -4,19 +4,24 @@
 
 using namespace std;
 
-class product {
-    private:
-        int price;
-    public:
-        product(int p) {
-            price = p;
-        }
-        int getDiscountPrice() {
-            return price - (price * 10 / 100);
-        }
+class product
+{
+private:
+    int price;
+
+public:
+    product(int p)
+    {
+        price = p;
+    }
+    int getDiscountPrice()
+    {
+        return price - (price * 10 / 100);
+    }
 };
 
-int main() {
+int main()
+{
     int p;
     cin >> p;
     product obj(p);

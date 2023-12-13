@@ -1,26 +1,31 @@
 /*
 To create a book class with the properties being
 title, author, cost and behaviour being open close read bookmark
-*/ 
+*/
 
 #include <iostream>
 #include <string>
 using namespace std;
 
-class Book{
+class Book
+{
     string title;
     string author;
     int cost;
-    void open(){
+    void open()
+    {
         cout << "The book is open" << endl;
     }
-    void close(){
+    void close()
+    {
         cout << "The book is closed" << endl;
     }
-    void read(){
+    void read()
+    {
         cout << "The book is being read" << endl;
     }
-    void bookmark(){
+    void bookmark()
+    {
         cout << "The book is bookmarked" << endl;
     }
 };

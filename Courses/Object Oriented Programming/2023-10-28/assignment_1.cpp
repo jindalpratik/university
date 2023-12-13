@@ -36,7 +36,6 @@ public:
     friend void Table::showTable();
 };
 
-
 int main()
 {
     int n;
