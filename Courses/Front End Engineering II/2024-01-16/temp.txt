@@ -1,0 +1,9 @@
+Q-3: John is a Data Analyst who is currently working on a project that involves analyzing sales
+data from a retail store. He is using SQL to query the database and extract useful insights. One
+day, while working on a query that calculates the average sales per store, he notices that the
+query is returning incorrect results. Upon further investigation, he realizes that the issue is due
+to he presence of NULL values in the sales data. John remembers that there is an SQL
+aggregation operator that does not ignore NULL values and decides to use it to get accurate
+results. Answer the following questions:
+[A] Can you name the operator John refers to?
+[BJ Explain two important uses of that operator.
