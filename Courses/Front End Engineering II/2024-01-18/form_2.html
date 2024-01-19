@@ -1,0 +1,33 @@
+<!-- Assignment-2:
+Create a text field as ' 'lastname" and make it disable. How do you confirm that its value is
+transferred or not on submitting the form? -->
+
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Form Example</title>
+</head>
+<body>
+    <form action="submit.php" method="post">
+        <label for="lastname">Last Name:</label>
+        <input type="text" name="lastname" disabled>
+        <br>
+        <input type="submit" value="Submit">
+    </form>
+    
+    <script>
+        document.querySelector('form').addEventListener('submit', function(event) {
+            event.preventDefault(); // Prevent form submission
+            
+            // Access the value of the disabled field
+            var lastnameValue = document.querySelector('input[name="lastname"]').value;
+            
+            // Do something with the value (e.g., display it in the console)
+            console.log("Last Name: " + lastnameValue);
+            
+            // Submit the form programmatically
+            this.submit();
+        });
+    </script>
+</body>
+</html>

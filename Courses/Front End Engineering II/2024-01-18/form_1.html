@@ -1,0 +1,35 @@
+<!-- Assignment-I:
+Create following form fields with the initial values as specified-
+Date field
+Month field
+Week field
+Time field
+Color selector
+- initialized as 26th January 2024.
+- initialized as October, 1976.
+— initialized as week 43 of year 2005.
+- initialized as 22 hours and 30 minutes.
+- initialized as white color. -->
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Assignment-I</title>
+</head>
+<body>
+    <form action="form.php" method="post">
+        <label for="date">Date:</label>
+        <input type="date" name="date" id="date" value="2024-01-26"><br><br>
+        <label for="month">Month:</label>
+        <input type="month" name="month" id="month" value="1976-10"><br><br>
+        <label for="week">Week:</label>
+        <input type="week" name="week" id="week" value="2005-W43"><br><br>
+        <label for="time">Time:</label>
+        <input type="time" name="time" id="time" value="22:30"><br><br>
+        <label for="color">Color:</label>
+        <input type="color" name="color" id="color" value="#ffffff"><br><br>
+        <button type="submit">Submit</button>
+    </form>
+</body>
+</html>
