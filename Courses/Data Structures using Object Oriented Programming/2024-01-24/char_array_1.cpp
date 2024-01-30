@@ -3,12 +3,13 @@
 
 using namespace std;
 
-int main() {
+int main()
+{
     char a[] = "abcdef";
     cout << a << endl;
     char b[100];
     char c;
-    c = cin.get(); //For a single line
+    c = cin.get(); // For a single line
     // b = cin.getline();
     cout << b << endl;
     return 0;

@@ -50,26 +50,32 @@ Output
 Sample I/O Explanation:
 In the test case, M equals to 9. For C = 1, it's optimal to choose {1} items; For C = 2, it's optimal to choose {5} items; For C = 3, it's optimal to choose {1, 5} items; For C = 4, it's optimal to choose {4, 5} items; For C = 5, it's optimal to choose {1, 4, 5} items; For C = 6, it's optimal to choose {3, 4, 5} items; For C = 7, it's optimal to choose {1, 3, 4, 5} items; For C = 8, it's optimal to choose {2, 3, 4, 5} items; For C = 9, it's optimal to choose {1, 2, 3, 4, 5} items. */
 
+#include <bits/stdc++.h> //type: ignore
 
-#include<bits/stdc++.h> //type: ignore
-
-#define FOR(i,a,b) for(int i=a;i<b;i++)
-#define LOOP(i,a) FOR(i,0,a)
+#define FOR(i, a, b) for (int i = a; i < b; i++)
+#define LOOP(i, a) FOR(i, 0, a)
 
 #define SET(p) memset(p, -1, sizeof(p))
 #define CLR(p) memset(p, 0, sizeof(p))
 #define BIG(p) memset(p, 0x3f, sizeof(p))
 
 #define ll unsigned long long
-#define oo (1000000000+7)
+#define oo (1000000000 + 7)
 #define DEBUG
 #ifdef DEBUG
-#define deb(args...) {dbg,args; cerr<<endl;}
+#define deb(args...)  \
+	{                 \
+		dbg, args;    \
+		cerr << endl; \
+	}
 #else
 #define deb(args...) // Just strip off all debug tokens
 #endif
-struct debugger {
-	template<typename T> debugger& operator ,(const T& v) {
+struct debugger
+{
+	template <typename T>
+	debugger &operator,(const T &v)
+	{
 		std::cerr << v << " ";
 		return *this;
 	}
@@ -77,60 +83,72 @@ struct debugger {
 
 using namespace std;
 long long ones[100005], two[100005];
-int main() {
+int main()
+{
 	int n, w, c;
 	long long M = 0;
-	cin >>n;
+	cin >> n;
 	priority_queue<long long> O, T;
-	priority_queue<long long, vector<long long>, greater<long long> > os, ts;
-	for (int i = 1; i <= n; i++) {
+	priority_queue<long long, vector<long long>, greater<long long>> os, ts;
+	for (int i = 1; i <= n; i++)
+	{
 		cin >> w >> c;
-		if (w == 1) {
+		if (w == 1)
+		{
 			M += 1;
 			O.push(c);
-		} else {
+		}
+		else
+		{
 			T.push(c);
 			M += 2;
 		}
 	}
-	//deb("over", M);
+	// deb("over", M);
 	long long m = 1, cost = 0, Top, ac = 0;
-	while (m <= M) {
+	while (m <= M)
+	{
 
-//		1 is a special case, cannot use weight of two
+		//		1 is a special case, cannot use weight of two
 
-			long long tcost, ocost;
-			tcost = ocost = cost;
-			if (os.empty() == false and T.empty() == false) {
-				tcost = tcost - os.top() + T.top();
-			}
-			if (O.empty() == false) {
-				ocost = ocost + O.top();
-
-			}
-			if (ocost > cost and ocost >= tcost) { /*adding one*/
-				cost = ocost;
-				os.push(O.top());
-				O.pop();
-				ac += 1;
-			} else if (tcost > cost and tcost >= ocost) { /*removing one and adding two*/
-				cost = tcost;
+		long long tcost, ocost;
+		tcost = ocost = cost;
+		if (os.empty() == false and T.empty() == false)
+		{
+			tcost = tcost - os.top() + T.top();
+		}
+		if (O.empty() == false)
+		{
+			ocost = ocost + O.top();
+		}
+		if (ocost > cost and ocost >= tcost)
+		{ /*adding one*/
+			cost = ocost;
+			os.push(O.top());
+			O.pop();
+			ac += 1;
+		}
+		else if (tcost > cost and tcost >= ocost)
+		{ /*removing one and adding two*/
+			cost = tcost;
+			ts.push(T.top());
+			T.pop();
+			O.push(os.top());
+			os.pop();
+			ac += 1;
+		}
+		else if (T.empty() == false and ac + 2 <= m)
+		{
+			while (T.empty() == false and ac + 2 <= m)
+			{
+				cost += T.top();
 				ts.push(T.top());
 				T.pop();
-				O.push(os.top());
-				os.pop();
-				ac += 1;
-			} else if (T.empty() == false and ac+2 <= m) {
-				while (T.empty() == false and ac+2 <= m) {
-					cost += T.top();
-					ts.push(T.top());
-					T.pop();
-					ac += 2;
-				}
+				ac += 2;
 			}
+		}
 		cout << cost << endl;
 		m++;
-
 	}
 	return 0;
 }

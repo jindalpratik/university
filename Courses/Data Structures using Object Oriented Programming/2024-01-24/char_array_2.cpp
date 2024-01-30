@@ -1,8 +1,9 @@
-#include<iostream>
-#include<cstring>
+#include <iostream>
+#include <cstring>
 using namespace std;
 
-int main() {
+int main()
+{
     char sentence[100];
     char temp;
     int len = 0;
@@ -12,5 +13,5 @@ int main() {
         sentence[len++] = temp;
     }
     cout << sentence;
-    return 0;    
+    return 0;
 }

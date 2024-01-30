@@ -34,7 +34,7 @@ Input
 
 Output
 -1 1 1
--1 1 -1 0 3 4 
+-1 1 -1 0 3 4
 */
 
 #include <iostream>
@@ -42,30 +42,39 @@ Output
 #include <algorithm>
 using namespace std;
 
-int main() {
+int main()
+{
     int t;
     cin >> t;
-    while(t--) {
+    while (t--)
+    {
         int n;
         cin >> n;
         vector<int> v(n);
-        for(int i = 0; i < n; i++) {
+        for (int i = 0; i < n; i++)
+        {
             cin >> v[i];
         }
         vector<int> ans(n);
         ans[0] = -1;
-        for(int i = 1; i < n; i++) {
+        for (int i = 1; i < n; i++)
+        {
             int j = i - 1;
-            while(j >= 0 && v[j] >= v[i]) {
+            while (j >= 0 && v[j] >= v[i])
+            {
                 j--;
             }
-            if(j < 0) {
+            if (j < 0)
+            {
                 ans[i] = -1;
-            } else {
+            }
+            else
+            {
                 ans[i] = v[j];
             }
         }
-        for(int i = 0; i < n; i++) {
+        for (int i = 0; i < n; i++)
+        {
             cout << ans[i] << " ";
         }
         cout << endl;
