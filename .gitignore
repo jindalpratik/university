@@ -1,3 +1,4 @@
 test.*
 *.exe
 .idea
+node_modules
