@@ -1,5 +1,5 @@
 test.*
 *.exe
 .idea
-.class
+*.class
 node_modules
